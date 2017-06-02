@@ -43,6 +43,7 @@ android {
             }
         }
     }
+    resourcePrefix "welcome_"
 }
 
 dependencies {
