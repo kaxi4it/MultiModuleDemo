@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">commonlib</string>
+
+    <string name="loading">加载中…</string>
+    <string name="prompt">提示</string>
+    <string name="positive">确定</string>
+    <string name="negative">取消</string>
+    <string name="common_error">糟糕，加载失败···</string>
+    <string name="click_retry">点击重试</string>
 </resources>

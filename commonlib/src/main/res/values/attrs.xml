@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- A-Z字母索引bar -->
+    <declare-styleable name="IndexBar">
+        <attr name="indexBarTextSize" format="dimension" />
+        <attr name="indexBarPressTextColor" format="color" />
+        <attr name="indexBarDefaultTextColor" format="color" />
+        <attr name="indexBarPressBackground" format="color" />
+        <attr name="indexBarDefaultBackground" format="color" />
+    </declare-styleable>
+</resources>
