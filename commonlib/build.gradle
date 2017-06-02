@@ -22,15 +22,65 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
-
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    //阿里路由
     compile 'com.alibaba:arouter-api:1.2.1.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
-
-
+    //bga导航,适配器-start
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'cn.bingoogolapple:bga-banner:2.1.4@aar'
+    compile 'cn.bingoogolapple:bga-adapter:1.1.0@aar'
+    //bga导航,适配器-end
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.code.gson:gson:+'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.lzy.net:okhttputils:1.8.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //bga_zxing-start
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.3@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.3@aar'
+    //bga_zxing-end
+    //格式化输出日志
+    compile 'com.orhanobut:logger:1.14'
+    //仿微信ui多图加载 裁剪 方形圆形
+    //    compile 'com.lzy.widget:imagepicker:0.2.6' BUG太多，后期关注
+    //galleryfinal申请PHONE权限
+    compile 'cn.finalteam:galleryfinal:1.4.8.7'
+    //七牛云存储-start
+    compile 'com.qiniu:qiniu-android-sdk:7.2.2'
+    //七牛云存储-end
+    //分包
+    compile 'com.android.support:multidex:1.0.0'
+    //keytool -v -list -keystore .\app\wmyc_master.jks 获取md5码
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    //leakcanary存储空间权限
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    //增量编译,会影响zxing扫码解码速度
+    compile 'com.antfortune.freeline:runtime:0.5.0'
+    //流布局
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    //圆形头像
+    compile 'com.github.kaxi4it:EasyImageView:1.2'
+    //sweet弹框
+    compile 'cn.pedant.sweetalert:library:1.3'
+    //adapter
+    compile 'com.github.kaxi4it:EasyRecyclerViewAdapter:1.10'
+    //拼音
+    compile 'com.github.promeg:tinypinyin:1.0.0'
+    // ~80KB
+    //折线图
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
 }

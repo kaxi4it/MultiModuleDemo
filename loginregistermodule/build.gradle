@@ -49,5 +49,4 @@ dependencies {
     compile project(':commonlib')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     annotationProcessor 'com.alibaba:arouter-compiler:1.1.2.1'
-    compile 'com.alibaba:arouter-annotation:1.0.3'
 }
